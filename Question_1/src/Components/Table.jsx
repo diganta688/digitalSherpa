@@ -216,8 +216,8 @@ function Table() {
 
   const [userData, setUserData] = useState(data);
   const [searchTerm, setSearchTerm] = useState("");
-  const [editRowId, setEditRowId] = useState(null); // Track the row being edited
-  const [editFormData, setEditFormData] = useState({}); // Store the editable form data
+  const [editRowId, setEditRowId] = useState(null); 
+  const [editFormData, setEditFormData] = useState({}); 
 
   const deleteEmployee = (employee) => {
     const updatedData = userData.filter(
@@ -243,8 +243,8 @@ function Table() {
   };
 
   const handleEditClick = (employee) => {
-    setEditRowId(employee.employeeId); // Set the row to edit mode
-    setEditFormData({ ...employee, ...employee.address }); // Pre-fill the form with employee data
+    setEditRowId(employee.employeeId); 
+    setEditFormData({ ...employee, ...employee.address }); 
   };
 
   const handleInputChange = (e) => {
@@ -272,7 +272,7 @@ function Table() {
         : employee
     );
     setUserData(updatedData);
-    setEditRowId(null); // Exit edit mode
+    setEditRowId(null); 
     setEditFormData({});
   };
 
